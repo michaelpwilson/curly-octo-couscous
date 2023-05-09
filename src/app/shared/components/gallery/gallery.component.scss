@@ -1,0 +1,21 @@
+$sc-gallery-image-background-color: #000000;
+
+.gallery {
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__body {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+
+        &-item {
+            height: 10rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: $sc-gallery-image-background-color;
+        }
+    }
+}

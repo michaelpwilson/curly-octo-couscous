@@ -1,0 +1,14 @@
+<div class="gallery" *ngIf="favouriteDogs$ | async as favouriteDogs; else noFavouriteDogs;">
+    <h3 class="gallery__title">Favourite Dogs</h3>
+    <div class="gallery__body">
+        <div
+            *ngFor="let favouriteDog of favouriteDogs;"
+            class="gallery__body-item" 
+            [style.backgroundImage]="'url(' + favouriteDog + ')'">
+        </div>
+    </div>
+</div>
+
+<ng-template #noFavouriteDogs>
+    <p class="no-dogs-msg">Like a Dog and this section will populate with your favourite ones.</p>
+</ng-template>

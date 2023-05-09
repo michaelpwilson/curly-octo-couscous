@@ -1,0 +1,33 @@
+<div class="card">
+    <h4 class="card__title">Random Dog</h4>
+    <div class="card__image"
+        [style.backgroundImage]="'url(' + dogImageUrl + ')'">
+        <p *ngIf="errorMsg">{{errorMsg}}</p>
+    </div>
+    <div class="card__footer">
+        <div class="card__footer-datetime">
+            <strong>Date: {{formattedDate}}</strong>
+            <strong>Time: {{formattedTime}}</strong>
+        </div>
+        <div class="card__footer-actions">
+            <button
+                class="button button--primary js-button-start"
+                (click)="startImageCycle()"
+                [disabled]="isImageCycleActive">
+                Start
+            </button>
+            <button
+                class="button button--danger js-button-stop"
+                (click)="stopImageCycle()"
+                [disabled]="!isImageCycleActive">
+                Stop
+            </button>
+            <button
+                class="button button--accent js-button-like"
+                (click)="likeDog()" 
+                [disabled]="isDogLiked">
+                Like
+            </button>
+        </div>
+    </div>
+</div>

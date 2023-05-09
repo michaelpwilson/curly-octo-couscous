@@ -1,0 +1,59 @@
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    &, body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background-color: $sc-app-background-color;
+        font-family: $sc-app-font-family;
+    }
+}
+
+.button {
+    padding: .75rem 1rem;
+    border: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        &::before {
+            content: '';
+            background-color: $sc-button-hover-background-color;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    
+    &[disabled] {
+        opacity: 0.25;
+    }
+}
+
+.button--primary {
+    background-color: $sc-primary-color;
+    color: #ffffff;
+}
+
+.button--danger {
+    background-color: $sc-danger-color;
+    color: #ffffff;
+}
+
+.button--accent {
+    background-color: $sc-accent-color;
+}

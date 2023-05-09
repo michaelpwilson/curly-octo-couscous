@@ -1,0 +1,59 @@
+@import "../variables";
+
+.app {
+    height: 100%;
+
+    &__nav {
+        background-color: $sc-danger-color;
+        text-align: center;
+        color: #ffffff;
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+    }
+
+    &__body {
+        padding-top: 4rem;
+        height: 100%;
+        display: grid; 
+        grid-template-columns: 1fr 0.35fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". .";
+
+        &-sidebar {
+            background-color: #ffffff;
+            padding: 2rem;
+        }
+
+        &-content {
+            padding: 2rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: $sc-is-mobile) {
+    .app {
+        &__body {
+            display: block;
+
+            &-content {
+                height: 100%;
+                padding: 0rem!important;
+            }
+            
+            &-sidebar {
+                display: none;
+            }
+        }
+    }
+}

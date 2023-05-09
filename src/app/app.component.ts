@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dog-library-app';
+  // Subject to pass through to the child components
+  public favouriteDogs = new Subject<string[]>(); 
 }

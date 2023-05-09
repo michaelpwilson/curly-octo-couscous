@@ -1,1 +1,17 @@
-<h1>{{title}}</h1>
+<div class="app">
+    <div class="app__nav">
+        <h1>Dog Library</h1>
+    </div>
+    <div class="app__body">
+        <div class="app__body-content">
+            <app-card 
+                [favouriteDogsSubject]="favouriteDogs">
+            </app-card>
+        </div>
+        <div class="app__body-sidebar">
+            <app-gallery
+                [favouriteDogsSubject]="favouriteDogs">
+            </app-gallery>
+        </div>
+    </div>
+</div>
